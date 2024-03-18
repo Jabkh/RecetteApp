@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity,FlatList } from 'react-native';
 import { Card } from 'react-native-elements'; // Importez le composant Card de react-native-elements
 
 const RecipeDetailScreen = ({ route }) => {
@@ -23,7 +23,11 @@ const RecipeDetailScreen = ({ route }) => {
         />
         <Card.Title>{meal.title}</Card.Title>
         <Text style={styles.description}>{meal.description}</Text>
-        <Text style={styles.ingredients}>Ingrédients: {`\n${meal.ingredients.join('\n')}`}</Text>
+        <FlatList
+        data={meal.ingredients}
+        renderItem={({ item }) => <Text style={styles.ingredients}>{item}</Text>}
+        keyExtractor={(item, index) => index.toString()}
+      />
         {/* Bouton pour afficher/masquer les instructions */}
         <TouchableOpacity onPress={toggleInstructions}>
           <Text style={styles.toggleButton}>
@@ -31,7 +35,11 @@ const RecipeDetailScreen = ({ route }) => {
           </Text>
         </TouchableOpacity>
         {/* Affichage des instructions */}
-        {showInstructions && <Text style={styles.instructions}>Instructions:{`\n${meal.steps.join('\n')}`}</Text>}
+        {showInstructions && <FlatList
+        data={meal.steps}
+        renderItem={({ item }) => <Text style={styles.ingredients}>{item}</Text>}
+        keyExtractor={(item, index) => index.toString()}
+      />}
       </Card>
     </View>
   );
@@ -56,6 +64,8 @@ const styles = StyleSheet.create({
   ingredients: {
     fontSize: 18,
     marginBottom: 10,
+    backgroundColor: '#f5f5f5',
+    textAlign: 'center',
   },
   instructions: {
     backgroundColor: '#f5f5f5',

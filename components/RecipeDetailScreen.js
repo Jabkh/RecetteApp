@@ -23,7 +23,7 @@ const RecipeDetailScreen = ({ route }) => {
         />
         <Card.Title>{meal.title}</Card.Title>
         <Text style={styles.description}>{meal.description}</Text>
-        <Text style={styles.ingredients}>Ingrédients: {meal.ingredients.join(', ')}</Text>
+        <Text style={styles.ingredients}>Ingrédients: {`\n${meal.steps.join('\n')}`}</Text>
         {/* Bouton pour afficher/masquer les instructions */}
         <TouchableOpacity onPress={toggleInstructions}>
           <Text style={styles.toggleButton}>
@@ -31,7 +31,7 @@ const RecipeDetailScreen = ({ route }) => {
           </Text>
         </TouchableOpacity>
         {/* Affichage des instructions */}
-        {showInstructions && <Text style={styles.instructions}>Instructions: {meal.steps}</Text>}
+        {showInstructions && <Text style={styles.instructions}>Instructions:{`\n${meal.steps.join('\n')}`}</Text>}
       </Card>
     </View>
   );

@@ -52,6 +52,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
     backgroundColor: '#fff',
+    width: '100%',
   },
   image: {
     width: '100%',
@@ -77,6 +78,7 @@ const styles = StyleSheet.create({
     color: 'grey',
     textDecorationLine: 'none',
     marginBottom: 10,
+    textAlign: 'center',
   },
 });
 

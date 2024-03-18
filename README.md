@@ -12,11 +12,11 @@ L'application Recettes est une application mobile conçue pour aider les utilisa
 
 ## Capture d'écran de l'Application
 
-![Capture d'écran 1](/assets/screen(1).png)
+![Capture d'écran 1](/assets/screen(1).png){:width="400px" height="auto"}
 *Capture d'écran de la page d'accueil de l'application, montrant une sélection de recettes par catégorie.*
 
-![Capture d'écran 2](/assets/screen(2).png)
+![Capture d'écran 2](/assets/screen(2).png){:width="400px" height="auto"}
 *Capture d'écran de la page de détails d'une recette, affichant une image attrayante de la recette, la liste des ingrédients et les instructions de préparation.*
 
-![Capture d'écran 3](/assets/screen(5).png)
+![Capture d'écran 3](/assets/screen(5).png){:width="400px" height="auto"}
 *Capture d'écran de la fonction de filtrage des recettes, permettant aux utilisateurs de sélectionner des filtres spécifiques pour affiner leurs résultats de recherche.*

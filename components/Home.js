@@ -5,7 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 
 const Home = () => {
   const [selectedFilters, setSelectedFilters] = useState([]);
-  const navigation = useNavigation(); // Initialise la navigation
+  const navigation = useNavigation();
 
   const toggleFilter = (filter) => {
     if (selectedFilters.includes(filter)) {
